@@ -1,0 +1,7 @@
+path: C:/Users/danil/Downloads/BorrachaAutoTrain/archive
+
+train: train/images
+val: test/images
+
+nc: 1
+names: ['hands']
