@@ -19,8 +19,10 @@ Uma recriação do clássico jogo Pong onde o teclado foi substituído pelas sua
 ## 📦 Como Instalar e Rodar
 
 1. Clone este repositório:
+   ```bash
    git clone https://github.com/DanEstren/pingpong-python
    cd pingpong-python
+   
 Crie um ambiente virtual (recomendado usar Anaconda ou venv) e instale as dependências:
 
 2. Crie um ambiente virtual e instale as dependências
@@ -29,8 +31,6 @@ Crie um ambiente virtual (recomendado usar Anaconda ou venv) e instale as depend
 
 
 pip install pygame opencv-python ultralytics
-
-
 
 
 3. Execute o jogo
