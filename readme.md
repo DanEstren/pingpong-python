@@ -1,4 +1,4 @@
-Markdown# 🏓 AI Pong: Controle por Gestos com YOLO e Pygame
+🏓 AI Pong: Controle por Gestos com YOLO e Pygame
 
 Uma recriação do clássico jogo Pong onde o teclado foi substituído pelas suas próprias mãos. Este projeto utiliza Visão Computacional com um modelo YOLO treinado para rastrear pontos chave (keypoints) das mãos em tempo real via webcam, mapeando esses movimentos para controlar as raquetes no jogo.
 
@@ -20,8 +20,34 @@ Uma recriação do clássico jogo Pong onde o teclado foi substituído pelas sua
 
 1. Clone este repositório:
    ```bash
-   git clone [https://github.com/SEU_USUARIO/pong-yolo-hands.git](https://github.com/SEU_USUARIO/pong-yolo-hands.git)
-   cd pong-yolo-hands
-Crie um ambiente virtual (recomendado usar Anaconda ou venv) e instale as dependências:Bashpip install pygame opencv-python ultralytics
-Coloque o modelo YOLO treinado (best.pt) na pasta raiz do projeto.Execute o jogo:Bashpython pingpong.py
-🧠 Como Funciona a Integração?O projeto desacopla o sistema de input tradicional do Pygame. Em vez de ler eventos de teclado para calcular a velocidade da raquete, o loop principal lê um frame da webcam, passa pelo modelo YOLO, extrai as coordenadas $Y$ dos centros das mãos e faz uma conversão de escala proporcional (regra de três) entre a resolução da webcam e a resolução da tela do jogo (600x400). As variáveis de posição das raquetes são atualizadas em tempo real antes de cada renderização de frame.🤝 ContribuiçãoSinta-se à vontade para abrir issues ou enviar pull requests com melhorias para a física do jogo ou modelos de detecção mais precisos!
+   git clone https://github.com/DanEstren/pingpong-python
+   cd pingpong-python
+
+Crie um ambiente virtual (recomendado usar Anaconda ou venv) e instale as dependências:
+
+Bash
+
+pip install pygame opencv-python ultralytics
+
+Execute o jogo:
+
+Bash
+
+python pingpong.py
+
+🧠 Como Funciona a Integração?
+
+O projeto desacopla o sistema de input tradicional do Pygame. Em vez de ler eventos de teclado para calcular a velocidade da raquete, o loop principal lê um frame da webcam, passa pelo modelo YOLO, extrai as coordenadas $Y$ dos centros das mãos e faz uma conversão de escala proporcional (regra de três) entre a resolução da webcam e a resolução da tela do jogo (600x400). As variáveis de posição das raquetes são atualizadas em tempo real antes de cada renderização de frame.
+
+🤝 Contribuição
+
+Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias para a física do jogo ou modelos de detecção mais precisos!
+
+Referencia
+
+https://gist.github.com/vinothpandian/4337527
+
+Dataset
+https://www.kaggle.com/datasets/nomihsa965/hand-detection-dataset-vocyolo-format?resource=download
+
+Como treinar está no trainer.py, é necessário extrair, e tirar da pasta yolo os labels.txt e colocar na pasta labels
